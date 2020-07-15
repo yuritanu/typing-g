@@ -2,7 +2,16 @@
   %h2 タイピングゲーム
   #content
     %p#yomi よみ
-    .mandai
-      %p#char-1.text.default あ
-      %p#char-2.text.default あ
-      %p#char-3.text.default あ
+    #mondai
+      %p#char-1.text.default a
+      %p#char-2.text.default b
+      %p#char-3.text.default c
+    #finish-panel.hidden
+      %p 終了しました！お疲れ様です!!
+      %input#start-button{type:"button", value: "やりなおす"}
+
+    #tool
+      %select#count-select
+        %option{value:"3"} 出題数：３問
+        %option{value:"5"} 出題数：５問
+        %option{value:"10"} 出題数：１０問
