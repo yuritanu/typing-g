@@ -1,10 +1,38 @@
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
 #main{
+  height: 100vh;
+  padding-top: 20px;
   text-align: center;
+  background: linear-gradient(#81d5eb,  #deeef1);
+  .anime-t{
+    margin-left: 200px;
+    margin-right: 200px;
+    h2{
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 1px 0 5px black;
+      font: bold 2rem Consolas, Monaco, monospace;
+      border-right: .1em solid grey; 
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      -webkit-animation: typing 3s steps(25, end),
+      blink-caret .6s step-end infinite alternate;
+    }
+  }
+  
   #content{
+    background-color: #fff;
     border: 2px solid black;
     border-radius: 10px;
     width: 400px;
     margin: 0 auto;
+    #start-message{
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
     #yomi{
       margin-top: 20px;
       top: 10px;
@@ -39,6 +67,19 @@
     .hidden{
       display: none;
     }
+    #end{
+      font-size: 20px;
+    }
+    #correct-message{
+      padding-top: 10px; 
+    }
+    #mistake-message{
+      padding-top: 10px;
+      color: red;
+    }
+    #time-message{
+      padding-top: 10px;
+    }
     #start-button{
       margin: 10px;
       font-size: 1.0em;
@@ -49,6 +90,8 @@
       border-style: none;
       cursor: pointer;
     }
+          
+  }
     #tool{
       padding-top: 16px;
       #count-select{
@@ -58,7 +101,5 @@
         padding: 10px;
         margin: 10px;
       }
-      
     }
-  }
 }

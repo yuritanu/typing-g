@@ -1,17 +1,20 @@
 #main
-  %h2 タイピングゲーム
+  .anime-t
+    %h2 Typing Game
   #content
-    %p#yomi よみ
+    %p#start-message 「スペースキー」を押すとスタートします
+    %p#yomi
     #mondai
-      %p#char-1.text.default a
-      %p#char-2.text.default b
-      %p#char-3.text.default c
+      -# ここに問題がでる
     #finish-panel.hidden
-      %p 終了しました！お疲れ様です!!
+      %p#end ＊＊＊ 終了！お疲れ様です ＊＊＊
+      %p#correct-message
+      %p#mistake-message
+      %p#time-message
       %input#start-button{type:"button", value: "やりなおす"}
 
-    #tool
-      %select#count-select
-        %option{value:"3"} 出題数：３問
-        %option{value:"5"} 出題数：５問
-        %option{value:"10"} 出題数：１０問
+  #tool
+    %select#count-select
+      %option{value:"3"} 出題数：３問
+      %option{value:"5"} 出題数：５問
+      %option{value:"10"} 出題数：１０問
