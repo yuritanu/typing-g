@@ -1,5 +1,6 @@
 $(function(){
-  // HTMLをJQueryオブフェクトを変数に代入
+
+    // HTMLをJQueryオブフェクトを変数に代入
   const $yomi = $('#yomi');
   const $mondai = $('#mondai');
   const $finishPanel = $('#finish-panel');
